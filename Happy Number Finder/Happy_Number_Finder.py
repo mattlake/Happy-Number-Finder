@@ -14,9 +14,6 @@ def is_happy(number):
     for i in squares_list:
         total += i
 
-    #Display current total
-    print(total)
-
     #Check if happy, unhappy or in progress
     if(total == 1):
         return True
@@ -40,10 +37,13 @@ else:
         i+=1
         if(is_happy(i) == False):
             unhappy_list.append(i)
+            print(str(i) + ' is unhappy :(')
         elif(is_happy(i) == True):
             happy_list.append(i)
+            print(str(i) + ' is happy :)')
         else:
             print("Error")
             continue
-        print('Found happy numbers: '+ str(happy_list))
-        print('Found unhappy numbers: '+ str(unhappy_list))
+
+print('Found happy numbers: '+ str(happy_list))
+print('Found unhappy numbers: '+ str(unhappy_list))
